@@ -1,9 +1,11 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import AuthGuard from '../lib/AuthGuard';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../styles/theme';
-import { AuthProvider } from '../lib/auth';
+// import { AuthProvider } from '../lib/auth';
 import Layout from '../components/layout/Layout';
 
 export default function MyApp(props) {
@@ -31,12 +33,9 @@ export default function MyApp(props) {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        {/* Firebase Auth */}
-        <AuthProvider>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
-        </AuthProvider>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
       </ThemeProvider>
     </React.Fragment>
   );
