@@ -1,4 +1,4 @@
-## My Personal Nextjs Starter + Some Extras 🛩️
+## EC Project Starter 🛩️
 
 - 🖼️ **Material UI with Theme Provider** - Includes custom `_app.js` and `_.document.js` already configured and ready to go 🔥.
 - 🔒 **Auth Guard** -HOC for easy routing and auth logic.
